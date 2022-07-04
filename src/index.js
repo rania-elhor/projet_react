@@ -4,11 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-var element = <h1>Bonjour, monde !</h1>;
+  
 
 
- element += <h1>Hello !</h1>;
-ReactDOM.render(element, document.getElementById('root'));
+ ReactDOM.render(
+  <div>
+    Projet React1
+     <h3>Bonjour, monde !</h3>
+   
+  </div>,
+  document.getElementById('root')
+);
+
 
 reportWebVitals();
 // If you want to start measuring performance in your app, pass a function
