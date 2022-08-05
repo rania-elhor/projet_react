@@ -3,22 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
-<<<<<<< HEAD
-const root = ReactDOM.createRoot(<h1>Test</h1>,document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
-=======
-var element = <h1>Bonjour, monde !</h1>;
->>>>>>> 3f7106751f5f851bf9ec80665980df01621b0ef5
-
-
- element += <h1>Hello !</h1>;
-ReactDOM.render(element, document.getElementById('root'));
-
+const REACT_VERSION = React.version;
+ReactDOM.render(
+  <h1>test</h1>,<div>React version: {REACT_VERSION}</div>
+  , document.getElementById('root'));
+  const [state, setState] = useState(initialState);
+  setState(newState);
+  function Counter({initialCount}) {
+    const [count, setCount] = useState(initialCount);
+    return (
+      <>
+        Total : {count}
+        <button onClick={() => setCount(initialCount)}>Réinitialiser</button>
+        <button onClick={() => setCount(prevCount => prevCount - 1)}>-</button>
+        <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>
+      </>
+    );
+  }
+  
 reportWebVitals();
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
